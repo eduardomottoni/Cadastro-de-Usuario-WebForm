@@ -11,16 +11,16 @@ namespace SistemaMecanica
 {
 
 
-    public partial class SiteMaster
+    public partial class WebForm3
     {
 
         /// <summary>
-        /// Controle MainContent.
+        /// Controle formveiculo.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.HtmlControls.HtmlForm formveiculo;
     }
 }

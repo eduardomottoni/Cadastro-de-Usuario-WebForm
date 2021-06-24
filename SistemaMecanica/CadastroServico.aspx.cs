@@ -9,7 +9,7 @@ namespace SistemaMecanica
 {
     public partial class WebForm2 : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected void Page_Load(object sender, EventArgs e) // Método que recebe o envio do formulário
         {
 
             string nomeserv = Request.Form["nomeserv"];
@@ -17,7 +17,7 @@ namespace SistemaMecanica
             float valor = 0;
                 try
             {
-                valor = float.Parse(Request.Form["valor"]);
+                valor = float.Parse(Request.Form["valor"]); // O método naturalmente retornava erro, então foi adicionada uma excessão para a primeira execução não encerrar o programa.
             }
             catch (ArgumentNullException)
             {
@@ -28,7 +28,7 @@ namespace SistemaMecanica
                 
             }
             
-            Cadastro.CadServico(nomeserv, descricao, valor);
+            Cadastro.CadServico(nomeserv, descricao, valor); //Trecho para criar um objeto da classe Serviço ao ser preenchido e enviado pelo usuário.
         }
     }
 }

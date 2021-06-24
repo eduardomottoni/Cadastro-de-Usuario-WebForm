@@ -10,7 +10,7 @@ namespace SistemaMecanica
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected void Page_Load(object sender, EventArgs e) // Método que recebe o envio do formulário
         {
 
 
@@ -20,13 +20,13 @@ namespace SistemaMecanica
             long cpf = 0;
             try
             {
-                cpf = Convert.ToInt64(Request.Form["cpf"]);
+                cpf = Convert.ToInt64(Request.Form["cpf"]); // Try para caso o valor enviado seja nulo ou incorreto, como letras por exemplo.
             }
             catch (FormatException)
             {
 
             }
-            Cadastro.CadCliente(nome, email, endereco, cpf);
+            Cadastro.CadCliente(nome, email, endereco, cpf); // Método de criação de um novo objeto da classe Cliente após o envio de formulário.
 
         }
     }
