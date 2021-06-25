@@ -33,7 +33,7 @@
                         </div>
                         <div>
                             <label for="valor">Valor:</label>
-                            <input type="text" name="valor" value="0,0" />
+                            <input type="text" name="valor" value="" />
                         </div>
                         <div>
                             <label>&nbsp;</label>
@@ -41,7 +41,11 @@
                         </div>
                     </fieldset>
                 </form>
+
             </div>
+            <br />
+             <asp:Literal ID = "ltTable" runat = "server" /> <!-- Esse código é reposável pela geração das tabelas abaixo após o envio do post -->
+        <br />
         </div>
         <!--#include file="footer.txt"-->
     </div>

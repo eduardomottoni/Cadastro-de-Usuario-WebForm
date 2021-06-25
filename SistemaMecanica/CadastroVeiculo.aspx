@@ -16,7 +16,7 @@
 </head>
 <body>
     
-    <div class="container body-content">
+    <div class="container body-content"> <!-- Classe utilizada do Site.Master -->
         <div class="jumbotron">
             <div class="col-xs-offset-1">
                 <!--#include file="nav-top.txt"-->
@@ -55,6 +55,9 @@
                     </fieldset>
                 </form>
             </div>
+            <br />
+            <asp:Literal ID = "ltTable" runat = "server" /> <!-- Esse código é reposável pela geração das tabelas abaixo após o envio do post -->
+            <br />
         </div>
         <!--#include file="footer.txt"-->
     </div>
