@@ -41,10 +41,11 @@ namespace SistemaMecanica
 
                 Console.Write("Formato invalido");
                
+               
             }
             if (cpf == 0)
             {
-                cpf = 999999999949;
+                cpf = 99999999999;
             }
             Cliente Clt = Cadastro.CadCliente(nome, email, endereco, cpf); // Essa chamada do método pretente criar um objeto Cliente e retornar o nome do cliente na linha abaixo.
             if (this.IsPostBack)
@@ -97,8 +98,8 @@ namespace SistemaMecanica
 
                         //Table end.
                         sb.Append("</table>");
-                        sb.Append("<div><p>O 'objeto' Cliente foi declarado com os dados acima através da classe abstrata Cadastro, e seu método CadClient(). Os valores podem ser acessados, por exemplo, pelo método GetNome() ou Get<Variavel> para qualquer outra variável</p></div>");
-                        ltTable.Text = sb.ToString();
+                        sb.Append("<div><p class=\"tiny\">O 'objeto' Cliente foi declarado com os dados acima.</p></div>"); //  através da classe abstrata Cadastro, e seu método CadClient(). Os valores podem ser acessados, por exemplo, pelo método GetNome() ou Get<Variavel> para qualquer outra variável
+                ltTable.Text = sb.ToString();
 
 
 
