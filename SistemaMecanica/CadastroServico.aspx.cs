@@ -35,12 +35,9 @@ namespace SistemaMecanica
             }
             catch (FormatException)
             {
-
+                valor = float.NaN;
             }
-            if (valor == 0)
-            {
-                valor = 9999;
-            }
+            
 
             Servico Serv = Cadastro.CadServico(nomeserv, descricao, valor); //Trecho para criar um objeto da classe Serviço ao ser preenchido e enviado pelo usuário.
 
