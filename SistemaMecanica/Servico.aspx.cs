@@ -11,7 +11,7 @@ namespace SistemaMecanica
 {
     public partial class Servico : System.Web.UI.Page
     {
-        SqlConnection sqlCon = new SqlConnection(@"Data Source=DESKTOP-3LC8U27;Initial Catalog=ASPCRUD;Integrated Security=true");
+        SqlConnection sqlCon = new SqlConnection(@"Data Source=(local);Initial Catalog=ASPCRUD;Integrated Security=true");
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
