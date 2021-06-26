@@ -124,9 +124,7 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="CadastroCliente.aspx" />
-    <Content Include="CadastroServico.aspx" />
-    <Content Include="CadastroVeiculo.aspx" />
+    <Content Include="Cliente.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -159,6 +157,7 @@
     <Content Include="Site.Master" />
     <Content Include="nav-top.txt" />
     <Content Include="footer.txt" />
+    <Content Include="Veiculo.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -207,6 +206,13 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
+    <Compile Include="Veiculo.aspx.cs">
+      <DependentUpon>Veiculo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Veiculo.aspx.designer.cs">
+      <DependentUpon>Veiculo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -214,26 +220,12 @@
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
-    <Compile Include="CadastroCliente.aspx.cs">
-      <DependentUpon>CadastroCliente.aspx</DependentUpon>
+    <Compile Include="Cliente.aspx.cs">
+      <DependentUpon>Cliente.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="CadastroCliente.aspx.designer.cs">
-      <DependentUpon>CadastroCliente.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CadastroServico.aspx.cs">
-      <DependentUpon>CadastroServico.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CadastroServico.aspx.designer.cs">
-      <DependentUpon>CadastroServico.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="CadastroVeiculo.aspx.cs">
-      <DependentUpon>CadastroVeiculo.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CadastroVeiculo.aspx.designer.cs">
-      <DependentUpon>CadastroVeiculo.aspx</DependentUpon>
+    <Compile Include="Cliente.aspx.designer.cs">
+      <DependentUpon>Cliente.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

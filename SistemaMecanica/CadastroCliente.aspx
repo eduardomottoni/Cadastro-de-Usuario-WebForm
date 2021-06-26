@@ -18,6 +18,8 @@
     <div class="jumbotron">  <!-- Classe utilizada do Site.Master -->
         <div class="col-xs-offset-1">
             <!--#include file="nav-top.txt"-->                           <!-- Include da barra de navegação -->
+
+
             <form id="formcliente" method="post" runat="server">  <!-- Formulário para o cadastro de um novo cliente -->
                 <fieldset>
                     <legend>Novo Cliente</legend>
