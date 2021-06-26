@@ -6,8 +6,18 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 </head>
 <body>
+
+    <!--#include file="nav-top.txt" -->
+      <div class="container body-content">
+          <div class="jumbotron">
     <form id="form1" runat="server">
         <div>
         <asp:HiddenField ID="hfClienteID" runat="server" />
@@ -87,7 +97,10 @@
         </asp:GridView>
         </div>
     </form>
-
+          </div>
+           <!--#include file="footer.txt" -->
+      </div>
+   
 
 </body>
 </html>

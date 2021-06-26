@@ -52,9 +52,9 @@
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/">Página inicial</a></li>
-                        <li><a runat="server" href="~/CadastroCliente">Cadastro de Cliente</a></li>
-                        <li><a runat="server" href="~/CadastroVeiculo">Cadastro de Veiculo</a></li>
-                        <li><a runat="server" href="~/CadastroServico">Cadastro de Serviço</a></li>
+                        <li><a runat="server" href="~/Cliente">Cadastro de Cliente</a></li>
+                        <li><a runat="server" href="~/Veiculo">Cadastro de Veiculo</a></li>
+                        <li><a runat="server" href="~/Servico">Cadastro de Serviço</a></li>
                     </ul>
                 </div>
             </div>
