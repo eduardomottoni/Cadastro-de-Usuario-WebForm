@@ -1,0 +1,6 @@
+﻿CREATE PROC VeiculoViewAll
+AS
+	BEGIN
+	SELECT *
+	FROM Veiculo
+	END

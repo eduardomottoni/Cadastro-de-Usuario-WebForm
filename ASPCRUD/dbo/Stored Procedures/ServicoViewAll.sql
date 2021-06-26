@@ -1,0 +1,6 @@
+﻿CREATE PROC ServicoViewAll
+AS
+	BEGIN
+	SELECT *
+	FROM Servico
+	END

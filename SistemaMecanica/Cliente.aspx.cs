@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
 using System.Web.UI.WebControls;
 
 namespace SistemaMecanica
@@ -19,7 +15,7 @@ namespace SistemaMecanica
                 btnDeletar.Enabled = false;
                 FillGridView();
             }
-            }
+        }
 
         protected void btnLimpar_Click(object sender, EventArgs e)
         {
@@ -40,22 +36,22 @@ namespace SistemaMecanica
         {
             if (sqlCon.State == System.Data.ConnectionState.Closed)
                 sqlCon.Open();
-            SqlCommand sqlCmd = new SqlCommand("ClienteCreateOrUpdate",sqlCon);
+            SqlCommand sqlCmd = new SqlCommand("ClienteCreateOrUpdate", sqlCon);
             sqlCmd.CommandType = CommandType.StoredProcedure;
-            sqlCmd.Parameters.AddWithValue("@ClienteID",(hfClienteID.Value==""?0:Convert.ToInt64(hfClienteID.Value)));
-            sqlCmd.Parameters.AddWithValue("@Nome",txtNome.Text.Trim());
+            sqlCmd.Parameters.AddWithValue("@ClienteID", (hfClienteID.Value == "" ? 0 : Convert.ToInt64(hfClienteID.Value)));
+            sqlCmd.Parameters.AddWithValue("@Nome", txtNome.Text.Trim());
             sqlCmd.Parameters.AddWithValue("@Email", txtEmail.Text.Trim());
             sqlCmd.Parameters.AddWithValue("@Endereco", txtEndereco.Text.Trim());
             sqlCmd.Parameters.AddWithValue("Cpf", txtCPF.Text.Trim());
             sqlCmd.ExecuteNonQuery();
             sqlCon.Close();
-           string clienteID = hfClienteID.Value;
+            string clienteID = hfClienteID.Value;
             Clear();
             if (hfClienteID.Value == "")
                 lblMensagemSucesso.Text = "Salvo com sucesso";
             else
                 lblMensagemSucesso.Text = "Atualizado com sucesso";
-                FillGridView();
+            FillGridView();
 
         }
         void FillGridView()
@@ -74,7 +70,7 @@ namespace SistemaMecanica
         protected void lnk_OnClick(object sender, EventArgs e)
         {
             int clienteID = Convert.ToInt32((sender as LinkButton).CommandArgument);
-            
+
             if (sqlCon.State == System.Data.ConnectionState.Closed)
                 sqlCon.Open();
             SqlDataAdapter sqlDa = new SqlDataAdapter("ClienteViewPorID", sqlCon);

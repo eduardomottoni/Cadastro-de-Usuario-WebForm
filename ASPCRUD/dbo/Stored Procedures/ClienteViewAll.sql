@@ -1,0 +1,6 @@
+﻿CREATE PROC ClienteViewAll
+AS
+	BEGIN
+	SELECT *
+	FROM Cliente
+	END
