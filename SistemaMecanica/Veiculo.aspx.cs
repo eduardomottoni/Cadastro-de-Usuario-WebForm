@@ -1,13 +1,17 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.IO;
+using System.Reflection;
 using System.Web.UI.WebControls;
 
 namespace SistemaMecanica
 {
+    
     public partial class Veiculo : System.Web.UI.Page
     {
-        SqlConnection sqlCon = new SqlConnection(@"Data Source=(local);Initial Catalog=ASPCRUD;Integrated Security=true");
+        static string path = System.AppDomain.CurrentDomain.BaseDirectory.Replace("/","\"");
+        SqlConnection sqlCon = new SqlConnection(string.Format(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={0}App_Data\Database.mdf;Integrated Security=True;Connect Timeout=30", path));
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
