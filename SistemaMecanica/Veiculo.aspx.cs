@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
-using System.IO;
-using System.Reflection;
+
 using System.Web.UI.WebControls;
 
 namespace SistemaMecanica
@@ -10,8 +9,7 @@ namespace SistemaMecanica
     
     public partial class Veiculo : System.Web.UI.Page
     {
-        static string path = System.AppDomain.CurrentDomain.BaseDirectory.Replace("/","\"");
-        SqlConnection sqlCon = new SqlConnection(string.Format(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename={0}App_Data\Database.mdf;Integrated Security=True;Connect Timeout=30", path));
+        SqlConnection sqlCon = new SqlConnection(@"Data Source=tcp:sistemamecanicadbserver.database.windows.net,1433;Initial Catalog=SistemaMecanica_db;User Id=eduardo@sistemamecanicadbserver;Password=1128A00sm");
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
