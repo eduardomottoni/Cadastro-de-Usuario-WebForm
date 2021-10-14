@@ -9,7 +9,7 @@ namespace SistemaMecanica
     
     public partial class Veiculo : System.Web.UI.Page
     {
-        SqlConnection sqlCon = new SqlConnection(@"Data Source=tcp:sistemamecanicadbserver.database.windows.net,1433;Initial Catalog=SistemaMecanica_db;User Id=eduardo@sistemamecanicadbserver;Password=1128A00sm");
+        SqlConnection sqlCon = new SqlConnection(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\dudu_\source\repos\SistemaMecanica\SistemaMecanica\App_Data\Database.mdf;Integrated Security=True");
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)

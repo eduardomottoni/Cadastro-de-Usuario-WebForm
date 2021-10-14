@@ -1,10 +1,5 @@
 {
   "dependencies": {
-    "mssql1": {
-      "type": "mssql.onprem",
-      "connectionId": "Database.mdf",
-      "secretStore": null
-    },
     "mssql2": {
       "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/sistemamecanicadbserver/databases/SistemaMecanica_db",
       "type": "mssql.azure",
